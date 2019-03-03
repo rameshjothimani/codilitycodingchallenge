@@ -13,17 +13,14 @@ class Tree{
 
 
     //Create a new node
-    static Node newNode(int key)
-    {
+    static Node newNode(int key){
         Node node = new Node();
         node.left = node.right = null;
         node.x = key;
         return node;
     }
 
-    public static void main(String args[])
-    {
-
+    public static void main(String args[]){
         Node root = newNode(5);
         root.left = newNode(3);
         root.right = newNode(10);
@@ -35,7 +32,6 @@ class Tree{
     }
 
     private static int findVisibleNodes(Node root) {
-
         return isVisible(root, Integer.MIN_VALUE);
     }
 
